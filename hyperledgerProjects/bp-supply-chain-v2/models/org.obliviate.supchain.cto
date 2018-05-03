@@ -1,0 +1,113 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * Write your model definitions here
+ */
+
+namespace org.obliviate.supchain
+
+asset Product identified by productID {
+  o String productID
+  o UsedProduct productName
+  o Integer quantity
+  o Double price
+  --> CompanyParticipant owner
+} 
+
+participant CompanyParticipant identified by companyID {
+    o String companyID
+    o String companyName
+    o String country
+    o ParticipantTypes companyType
+    o UsedProduct[] productTypes
+}
+
+enum ParticipantTypes {
+  o SUPPLIER
+  o MANUFACTURER
+  o DISTRIBUTER
+  o RETAILER
+  o CUSTOMER
+}
+
+enum UsedProduct {
+  o SEEDS
+  o FERTILIZER
+  o SOIL
+  o ELEKTRICITY
+  o WATER
+  o MACHINES
+  o CONTAINERS
+  o TOMATOES
+  o PLANE_CHINA_GERMANY
+  o PLANE_GERMANY_CHINA
+  o PLANE_CHINA_BRAZIL
+  o PLANE_BRAZIL_CHINA
+  o PLANE_GERMANY_BRAZIL
+  o PLANE_BRAZIL_GERMANY
+  o CAR_CHINA
+  o CAR_GERMANY
+  o CAR_BRAZIL
+  o SOUP
+  o SPAGHETTI_SAUCE
+  o LASAGNA
+  o KETCHUP
+  o SANDWICH
+}
+
+transaction TradeProduct {
+    --> Product productOldOwner
+    --> Product productNewOwner
+    o Integer quantity
+}
+
+event TradeProductSuccesEvent {
+  o String productName
+  o Double price
+  o Integer quantity
+  o String oldOwnerName
+  o String newOwnerName
+}
+
+transaction CreateMoreSupply {
+  --> Product product
+  o Integer quantity
+}
+
+event CreateMoreSupplySuccesEvent {
+  o String companyName
+  o String productName
+  o Integer oldQuantity
+  o Integer newQuantity
+}
+
+transaction CreateNewProduct {
+  --> Product TProduct
+  --> Product NProduct
+  o Integer quantity
+}
+
+event CreateNewProductSuccesEvent {
+  o String companyName
+  o String productNameOld
+  o String productNameNew
+  o Integer quantityOld
+  o Integer quantityNew
+}
+
+event TransactionFailedEvent {
+  o String transactionFunction
+  o String message
+}

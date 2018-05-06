@@ -29,7 +29,7 @@ class ComposerFiller {
                 console.log(output);
             }
             else if(evt.$type == 'CreateNewProductSuccesEvent'){
-                output = `The company ${evt.companyName} turned ${evt.quantityOld} ${evt.productNameOld} into ${evt.productNameNew} new ${evt.productNameNew}.\n`
+                output = `The company ${evt.companyName} turned ${evt.quantityOld} ${evt.productNameOld} into ${evt.quantityNew} new ${evt.productNameNew}.\n`
                 console.log(output);
             }
         });

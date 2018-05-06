@@ -9,7 +9,7 @@ async function tradeProduct(tx) {
 
     if(tx.productOldOwner.productName == tx.productNewOwner.productName){
 
-        if(tx.productOldOwner.quantity < tx.quantity){
+        if(tx.productOldOwner.quantity >= tx.quantity){
 
             const productOldOwner = tx.productOldOwner;
             const productNewOwner = tx.productNewOwner;
@@ -113,12 +113,14 @@ async function createProduct(tx) {
             ['TOMATOES', 'KETCHUP', 10]
         ];
         
-        var ok = false; var row = 0;
+        var ok = false; 
+        var row = 0;
         for(let i = 0; i < diffProducts.length; i++){
             if(diffProducts[i][0] == tx.TProduct.productName){
                 if(diffProducts[i][1] == tx.NProduct.productName){
-                    if(diffProducts[i][2] * tx.quantity >= tx.TProduct.quantity){
+                    if(diffProducts[i][2] * tx.quantity <= tx.TProduct.quantity){
                         ok = true;
+                        row = i;
                     }
                 }
             }
@@ -126,7 +128,7 @@ async function createProduct(tx) {
 
         if(ok == true){
 
-            tx.TProduct.quantity = tx.TProduct.quantity - (diffProducts[rown][2] * tx.quantity);
+            tx.TProduct.quantity = tx.TProduct.quantity - (diffProducts[row][2] * tx.quantity);
             tx.NProduct.quantity = tx.NProduct.quantity * tx.quantity;
 
             const assetRegistry = await getAssetRegistry('org.obliviate.supchain.Product');

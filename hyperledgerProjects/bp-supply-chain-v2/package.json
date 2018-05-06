@@ -1,6 +1,6 @@
 {
   "name": "bp-supply-chain-v2",
-  "version": "0.1.8",
+  "version": "0.1.11",
   "description": "hyperledger composer prototype for supply chain",
   "scripts": {
     "prepublish": "mkdirp ./dist && composer archive create --sourceType dir --sourceName . -a ./dist/bp-supply-chain-v2.bna",

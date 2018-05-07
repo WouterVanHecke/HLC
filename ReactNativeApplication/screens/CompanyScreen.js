@@ -52,12 +52,13 @@ export default class CompanyScreen extends React.Component {
   render() {
 
     participants = this.state.myParticipants.map( participant => (
-        <Button
+        <View><Button
             onPress={() => this._checkParticipant(participant.companyID)}
-            style={{height: 50, width: 300, borderRadius: 20, borderColor: "rgb(26, 117, 255)", marginBottom: 20, backgroundColor: "rgb(26, 117, 255)"}}
+            style={{height: 50, width: 300, borderRadius: 20, borderColor: "rgb(26, 117, 255)", backgroundColor: "rgb(26, 117, 255)"}}
             textStyle={{fontWeight: 'bold', color: 'white', fontSize: 20}}
         >{participant.companyName}
         </Button>
+        <View style={{marginTop: -5, paddingLeft: 10, flexDirection: 'row', marginBottom: 20}}><Text style={{flexWrap: 'wrap'}}>{participant.companyType != "RETAILER" ? participant.productTypes.toString() + "  -  " : ""}</Text><Text>{participant.country}</Text></View></View>
     ));
 
     return (

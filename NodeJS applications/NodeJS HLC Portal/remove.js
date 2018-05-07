@@ -18,8 +18,10 @@ class ComposerFiller {
         try {
             let participantRegistry = await this.SupChainConnection.getParticipantRegistry('org.obliviate.supchain.CompanyParticipant');
             let assetsRegistry = await this.SupChainConnection.getAssetRegistry('org.obliviate.supchain.Product');
+            let walletRegistry = await this.SupChainConnection.getAssetRegistry('org.obliviate.supchain.Wallet');
             await participantRegistry.getAll().then((res) => {participantRegistry.removeAll(res)});
-            await assetsRegistry.getAll().then((res) => {assetsRegistry.removeAll(res).then(() => {console.log('All info removed')})});
+            await assetsRegistry.getAll().then((res) => {assetsRegistry.removeAll(res)});
+            await walletRegistry.getAll().then((res) => {assetsRegistry.removeAll(res).then(() => {console.log('All info removed')})});
         }catch(error) {
             console.log(error);
             throw error;

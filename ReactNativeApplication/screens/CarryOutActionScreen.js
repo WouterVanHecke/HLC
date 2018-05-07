@@ -20,6 +20,7 @@ export default class CarryOutActionScreen extends React.Component {
             selectedParticipantID: null,
             amount: 5,
             myProductsMin: [],
+            sending: false,
         };
     }
 
@@ -52,6 +53,7 @@ export default class CarryOutActionScreen extends React.Component {
   ////////////////////////////////////////////////////////////FUNCTIONS////////////////////////////////////////////////////////////
 
     _checkParams = () => {
+        this.setState({sending: true});
         switch (this.state.action) {
             case "Create more supply":
                 let fun = "org.obliviate.supchain.CreateMoreSupply";
@@ -59,6 +61,7 @@ export default class CarryOutActionScreen extends React.Component {
                 let quantity = this.state.amount;
                 api.createMoreSupply(fun, product, quantity).then((res) => {
                     if(res.transactionId){
+                        this.setState({sending: false, amount: 0, selectedProductID: null, selectedParticipantID: null});
                         this.props.navigation.navigate('Events', {transactionID: res.transactionId, from: this.state.action});
                     }else{
                         //problems
@@ -105,10 +108,9 @@ export default class CarryOutActionScreen extends React.Component {
                 
                 let _quantity = this.state.amount;
 
-                Alert.alert(_fun);
-
                 api.tradeProduct(_fun, _oldProduct, _newProduct, _quantity).then((res) => {
                     if(res.transactionId){
+                        this.setState({sending: false, amount: 0, selectedProductID: null, selectedParticipantID: null});
                         this.props.navigation.navigate('Events', {transactionID: res.transactionId, from: this.state.action});
                     }else{
                         //problems
@@ -142,6 +144,7 @@ export default class CarryOutActionScreen extends React.Component {
 
                 api.createNewProduct(_class, _TProduct, _NProduct, _amount).then((res) => {
                     if(res.transactionId){
+                        this.setState({sending: false, amount: 0, selectedProductID: null, selectedParticipantID: null});
                         this.props.navigation.navigate('Events', {transactionID: res.transactionId, from: this.state.action});
                     }else{
                         //problems
@@ -307,6 +310,7 @@ export default class CarryOutActionScreen extends React.Component {
                 <View style={{alignItems: 'center'}}>
                     <View style={{alignItems: 'center'}}>
                         <Button
+                            isLoading={this.state.sending}
                             onPress={() => this._checkParams()}
                             style={{height: 50, width: 300, borderRadius: 20, borderColor: "rgb(26, 117, 255)", marginTop: 40, backgroundColor: "rgb(26, 117, 255)"}}
                             textStyle={{fontWeight: 'bold', color: 'white', fontSize: 20}}

@@ -13,30 +13,30 @@ class ComposerFiller {
         //part type - product type - country
         this.info = [
             [ //SUPPLIER
-                ['PID:111','SUPPLIER SAMPLE 1', 'China', 'SUPPLIER', 'SEEDS', 300000, 'AID:11', 0.01],
-                ['PID:112','SUPPLIER SAMPLE 2', 'Germany', 'SUPPLIER', 'SEEDS', 300000, 'AID:12', 0.02],
-                ['PID:113','SUPPLIER SAMPLE 3', 'Brazil', 'SUPPLIER', 'SEEDS', 300000, 'AID:13', 0.015],
-                ['PID:121','SUPPLIER SAMPLE 4', 'China', 'SUPPLIER', 'TOMATOES', 1000000, 'AID:21', 0.5, 1],
-                ['PID:122','SUPPLIER SAMPLE 5', 'Germany', 'SUPPLIER', 'TOMATOES', 1000000, 'AID:22', 0.45, 1],
-                ['PID:123','SUPPLIER SAMPLE 6', 'Brazil', 'SUPPLIER', 'TOMATOES', 1000000, 'AID:23', 0.52, 1],
-                ['PID:131','SUPPLIER SAMPLE 7', 'China', 'SUPPLIER', 'FERTILIZER', 200000, 'AID:31', 2],
-                ['PID:133','SUPPLIER SAMPLE 8', 'Brazil', 'SUPPLIER', 'FERTILIZER', 200000, 'AID:32', 2.2],
-                ['PID:141','SUPPLIER SAMPLE 9', 'China', 'SUPPLIER', 'SOIL', 100000, 'AID:41', 1],
-                ['PID:143','SUPPLIER SAMPLE 10', 'Brazil', 'SUPPLIER', 'SOIL', 100000, 'AID:42', 0.8],
-                ['PID:152','SUPPLIER SAMPLE 11', 'Germany', 'SUPPLIER', 'ELEKTRICITY'],
-                ['PID:162','SUPPLIER SAMPLE 12', 'Germany', 'SUPPLIER', 'WATER'],
-                ['PID:172','SUPPLIER SAMPLE 13', 'Germany', 'SUPPLIER', 'MACHINES'],
-                ['PID:182','SUPPLIER SAMPLE 14', 'Germany', 'SUPPLIER', 'CONTAINERS']
+                ['PID:111','Zhengyuan', 'China', 'SUPPLIER', 'SEEDS', 300000, 'AID:11', 0.01],
+                ['PID:112','Reimer Seeds', 'Germany', 'SUPPLIER', 'SEEDS', 300000, 'AID:12', 0.02],
+                ['PID:113','Basso Semillas', 'Brazil', 'SUPPLIER', 'SEEDS', 300000, 'AID:13', 0.015],
+                ['PID:121','Khanh Foods', 'China', 'SUPPLIER', 'TOMATOES', 1000000, 'AID:21', 0.5, 1],
+                ['PID:122','Silbury', 'Germany', 'SUPPLIER', 'TOMATOES', 1000000, 'AID:22', 0.45, 1],
+                ['PID:123','Bata Food', 'Brazil', 'SUPPLIER', 'TOMATOES', 1000000, 'AID:23', 0.52, 1],
+                ['PID:131','Seawinner', 'China', 'SUPPLIER', 'FERTILIZER', 200000, 'AID:31', 2],
+                ['PID:133','Argus Fertilizer', 'Brazil', 'SUPPLIER', 'FERTILIZER', 200000, 'AID:32', 2.2],
+                ['PID:141','Soil supplier 1', 'China', 'SUPPLIER', 'SOIL', 100000, 'AID:41', 1],
+                ['PID:143','Soil supplier 2', 'Brazil', 'SUPPLIER', 'SOIL', 100000, 'AID:42', 0.8],
+                ['PID:152','Amprion', 'Germany', 'SUPPLIER', 'ELEKTRICITY'],
+                ['PID:162','Berlin Water Works', 'Germany', 'SUPPLIER', 'WATER'],
+                ['PID:172','Weidemann GmbH', 'Germany', 'SUPPLIER', 'MACHINES'],
+                ['PID:182','Schoeller Allibert', 'Germany', 'SUPPLIER', 'CONTAINERS']
             ],
             [ //MANUFACTURER, 50 000 tomaten
-                ['PID:211', 'MANUFACTURER SAMPLE 1', 'China', 'MANUFACTURER', 'SOUP', 10000, 'AID:51', 'AID:24'],
-                ['PID:212', 'MANUFACTURER SAMPLE 2', 'Germany', 'MANUFACTURER', 'SOUP', 10000, 'AID:52', 'AID:25'],
-                ['PID:222', 'MANUFACTURER SAMPLE 3', 'Germany', 'MANUFACTURER', 'SPAGHETTI_SAUCE', 8000, 'AID:61', 'AID:26'],
-                ['PID:223', 'MANUFACTURER SAMPLE 4', 'Brazil', 'MANUFACTURER', 'SPAGHETTI_SAUCE', 8000, 'AID:62', 'AID:27'],
-                ['PID:233', 'MANUFACTURER SAMPLE 5', 'Brazil', 'MANUFACTURER', 'LASAGNA', 6000, 'AID:71', 'AID:28'],
-                ['PID:231', 'MANUFACTURER SAMPLE 6', 'China', 'MANUFACTURER', 'LASAGNA', 6000, 'AID:72', 'AID:29'],
-                ['PID:241', 'MANUFACTURER SAMPLE 7', 'China', 'MANUFACTURER', 'KETCHUP', 10000, 'AID:81', 'AID:210'],
-                ['PID:242', 'MANUFACTURER SAMPLE 8', 'Germany', 'MANUFACTURER', 'KETCHUP', 10000, 'AID:82', 'AID:211']
+                ['PID:211', 'Lovekitchen', 'China', 'MANUFACTURER', 'SOUP', 10000, 'AID:51', 'AID:24'],
+                ['PID:212', "Campbell's GmbH", 'Germany', 'MANUFACTURER', 'SOUP', 10000, 'AID:52', 'AID:25'],
+                ['PID:222', 'Hiltfields', 'Germany', 'MANUFACTURER', 'SPAGHETTI_SAUCE', 8000, 'AID:61', 'AID:26'],
+                ['PID:223', 'Heinz', 'Brazil', 'MANUFACTURER', 'SPAGHETTI_SAUCE', 8000, 'AID:62', 'AID:27'],
+                ['PID:233', 'CLAP INDUSTRIAL DE ALIMENTOS ', 'Brazil', 'MANUFACTURER', 'LASAGNA', 6000, 'AID:71', 'AID:28'],
+                ['PID:231', 'Xiamen Luckte', 'China', 'MANUFACTURER', 'LASAGNA', 6000, 'AID:72', 'AID:29'],
+                ['PID:241', 'Tianz', 'China', 'MANUFACTURER', 'KETCHUP', 10000, 'AID:81', 'AID:210'],
+                ['PID:242', 'Hiltfields', 'Germany', 'MANUFACTURER', 'KETCHUP', 10000, 'AID:82', 'AID:211']
             ],
             [ //DISTRIBUTER
                 ['PID:3113', 'DISTRIBUTER SAMPLE 1', 'Brazil', 'DISTRIBUTER', 'PLANE_BRAZIL_CHINA'],
@@ -60,12 +60,12 @@ class ComposerFiller {
                 ['PID:452', "FRITUUR T'HOEKSKE", 'Germany', 'RETAILER', ['SPAGHETTI_SAUCE', 'KETCHUP'], [5, 10], ['AID:66', 'AID:87']]
             ],
             [ //CUSTOMER
-                ['PID:511', 'CUSTOMER SAMPLE 1', 'China', 'CUSTOMER', 'TOMATOES', 3, 'AID:216'],
-                ['PID:521', 'CUSTOMER SAMPLE 2', 'China', 'CUSTOMER', 'SOUP', 2, 'AID:56'],
-                ['PID:512', 'CUSTOMER SAMPLE 3', 'Germany', 'CUSTOMER', 'LASAGNA', 1, 'AID:76'],
-                ['PID:522', 'CUSTOMER SAMPLE 4', 'Germany', 'CUSTOMER', 'KETCHUP', 1, 'AID:88'],
-                ['PID:513', 'CUSTOMER SAMPLE 5', 'Brazil', 'CUSTOMER', 'KETCHUP', 1, 'AID:89'],
-                ['PID:523', 'CUSTOMER SAMPLE 6', 'Brazil', 'CUSTOMER', 'SPAGHETTI_SAUCE', 2, 'AID:67']
+                ['PID:511', 'Wouter Van Hecke', 'China', 'CUSTOMER', 'TOMATOES', 3, 'AID:216'],
+                ['PID:521', 'Jens Mortier', 'China', 'CUSTOMER', 'SOUP', 2, 'AID:56'],
+                ['PID:512', 'Sam Maesschalck', 'Germany', 'CUSTOMER', 'LASAGNA', 1, 'AID:76'],
+                ['PID:522', 'Diego Carboni', 'Germany', 'CUSTOMER', 'KETCHUP', 1, 'AID:88'],
+                ['PID:513', 'Catarina Melas', 'Brazil', 'CUSTOMER', 'KETCHUP', 1, 'AID:89'],
+                ['PID:523', 'Jessica Brandao', 'Brazil', 'CUSTOMER', 'SPAGHETTI_SAUCE', 2, 'AID:67']
             ],
         ];
     }
@@ -79,14 +79,17 @@ class ComposerFiller {
 
             let participantRegistry = await this.SupChainConnection.getParticipantRegistry('org.obliviate.supchain.CompanyParticipant');
             let assetsRegistry = await this.SupChainConnection.getAssetRegistry('org.obliviate.supchain.Product');
+            let walletRegistry = await this.SupChainConnection.getAssetRegistry('org.obliviate.supchain.Wallet');
             let factory = this.businessNetworkDefinition.getFactory();
             var participants = [];
             var products = [];
+            var wallets = [];
 
             for(let i = 0; i < this.info.length; i++){
                 for(let j = 0; j < this.info[i].length; j++){
 
                     let participant = factory.newResource('org.obliviate.supchain', 'CompanyParticipant', this.info[i][j][0]);
+                    let wallet = factory.newResource('org.obliviate.supchain', 'Wallet', "W-" + this.info[i][j][0]);
 
                     participant.companyName = this.info[i][j][1];
                     participant.country = this.info[i][j][2];
@@ -98,7 +101,15 @@ class ComposerFiller {
                         participant.productTypes = [this.info[i][j][4]];
                     }
 
+                    wallet.privateKey = "E9873D79C6D87DC0FB6A57786333" + this.info[i][j][0] + "89F4453213303DA61F20BD67FC233AA33262";
+                    wallet.publicKey = "6FPZBT79E9G1VPR0FB6A5778633389F4453846303DA61F2R9FKS5C233AA33262";
+                    wallet.address = "E9873D79C6D87F2R9FKS5C233AA3";
+                    wallet.balance = 100000;
+
+                    participant.networkWallet = factory.newRelationship('org.obliviate.supchain', 'Wallet', "W-" + this.info[i][j][0]);
+
                     participants.push(participant);
+                    wallets.push(wallet);
 
                     if(i == 3){
 
@@ -150,6 +161,8 @@ class ComposerFiller {
 
             await participantRegistry.addAll(participants).then(() => {console.log('All participants added')});
             await assetsRegistry.addAll(products).then(() => {console.log('All assets added')});
+            await walletRegistry.addAll(wallets).then(() => {console.log('All wallets added')});
+
 
         } catch(error) {
             console.log(error);

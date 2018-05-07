@@ -26,12 +26,20 @@ asset Product identified by productID {
   --> CompanyParticipant owner
 } 
 
+asset Wallet identified by privateKey {
+  o String privateKey
+  o String publicKey
+  o String address
+  o Integer balance
+}
+
 participant CompanyParticipant identified by companyID {
     o String companyID
     o String companyName
     o String country
     o ParticipantTypes companyType
     o UsedProduct[] productTypes
+    --> Wallet networkWallet
 }
 
 enum ParticipantTypes {
